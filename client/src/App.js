@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import NavigationBar from './components/navBar'
+import HomePageButtons from './components/homePageButtons'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,8 +24,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <NavigationBar/>
+          <h1 className="App-title">Welcome to FilmWeb</h1>
+          <HomePageButtons/>
         </header>
     <p className="App-intro">{this.state.apiResponse}</p>
       </div>)
