@@ -1,12 +1,13 @@
 import React from 'react';
 import {Container, Button} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import '../App.css'
 
 function HomePageButtons(props) {
-    return <Container>
-        <Button href='#' className="Custom-test" variant='outline-primary' size='lg'>My Movies</Button>
-        <Button href='#' variant='outline-primary' size='lg'>Recommended</Button>
-        <Button href='#' variant='outline-primary' size='lg'>Browse</Button>
+    return <Container md={3}>
+        <Button className="Home-page-buttons" variant='outline-primary' size='lg'><Link to="/MyMovies">MyMovies</Link></Button>
+        <Button className="Home-page-buttons" variant='outline-primary' size='lg'><Link to="/Recommended">Recommended</Link></Button>
+        <Button className="Home-page-buttons" variant='outline-primary' size='lg'><Link to="/Browse">Browse</Link></Button>
     </Container>
 }
 

@@ -21,6 +21,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -42,11 +47,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-startDatabase().then(async () => {
   // `then` start the web server after the database starts
-  app.listen(3000, async () => {
-    console.log('Web server has started on port 3001 http://localhost:3000');
+  app.listen(3001, async () => {
+    console.log('Web server has started on port 3001 http://localhost:3001');
   });
-});
 
 module.exports = app;

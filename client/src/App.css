@@ -11,7 +11,148 @@
   color: white;
 }
 
-.Custom-test {
+.Home-page-buttons {
   background: orange;
   margin: 100px;
+}
+
+.m-card {
+  margin:20px;
+}
+
+.m-card-image {
+  border-radius: 10px;
+  width:300px;
+  height: 480px;
+  box-shadow: 0px 0px 3px 1px #CCC;
+}
+
+.m-card-info {
+  margin-top: 10px;
+  min-height:100px;
+}
+
+.m-card-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.m-card-director {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.p-recommendation-card {
+  max-height: 171px;
+  max-width: 180px;
+  margin: 20px;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.browseMovie {
+  background-color:  #2a3244;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  position: relative;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.browseMovie img {
+  object-fit: cover;
+  height: 400px;
+  max-width: 100%;
+}
+
+.browse-movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.browse-movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.browse-movie-info h3 {
+  margin: 0;
+}
+
+.movie-overview {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+  color: #2a3244;
+  position: absolute;
+  font-size: large;
+  overflow: auto;
+  max-height: 100%;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.browseMovie:hover .movie-overview {
+  transform: translateY(0%);
+}
+
+header {
+  background-color: #282c34;
+  margin-top: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  border: 2px solid #282c34;
+  border-radius: 50px;
+  background-color: white;
+  color: #282c34;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1.5 rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+.tag {
+  background-color: #282c34;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tag.green {
+  color: green;
+}
+
+.tag.orange {
+  color: orange;
+}
+.tag.red {
+  color: red;
+}
+
+h5 {
+  text-align: center;
+  color: rgb(50, 123, 192);
 }
